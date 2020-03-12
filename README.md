@@ -14,10 +14,13 @@ The Dyalog interpreter native library files **dwa_static** and **libdyalog** are
 ```
 
 ## JSON_APL
-This sample allows any language to call APL functions from any language which can access native shared libraries (using what is commonly referred to as the "Foreign Function Interface"), passing arguments and receiving results in JSON (JavaScript Object Notation) format.
+The JSON_APL sample allows any language to call APL functions from any language which can access native shared libraries (using what is commonly referred to as the "Foreign Function Interface"), passing arguments and receiving results in JSON (JavaScript Object Notation) format.
 
-## helloworld
+## HelloWorld
+The HelloWorld sample calls into APL to display a simple "hello" message.
 
-## qa
+## Qa
+The Qa sample uses and tests most (but not all) of the SDK and is provided for information only. It is used internally at Dyalog Ltd for QA purposes. Some elements of it might prove useful/interesting, for example, the Qa samples shows that the APL code can be called concurrently from multiple threads in the host application.
 
-## sign
+## Sign
+The Sign sample calls into APL using various different argument types to return the astrological star sign for a specific date.
