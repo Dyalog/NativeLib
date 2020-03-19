@@ -1,7 +1,7 @@
 # NativeLib
 These are the C source and build files for the Dyalog Native Library Samples. 
 
-The Dyalog interpreter native library files **dwa_static** and **libdyalog** are required to build these projects. They are installed in **[DYALOG]/dwa/lib** in standard Dyalog installations from version 18.0 onwards. Therefore any software bulit from the Dyalog Native Library SDK (described in the document [*APL as a Shared Library*](http://docs.dyalog.com/latest/APL%20as%20a%20Shared%20Library.pdf)) must be used in accordance with a Dyalog license agreement.
+> The Dyalog interpreter native library files **dwa_static** and **libdyalog** are required to build these projects. They are installed in **[DYALOG]/dwa/lib** in standard Dyalog installations from version 18.0 onwards. Therefore any software bulit from the Dyalog Native Library SDK (described in the document [*APL as a Shared Library*](http://docs.dyalog.com/latest/APL%20as%20a%20Shared%20Library.pdf)) must be used in accordance with a [Dyalog license agreement](https://www.dyalog.com/prices-and-licences.htm).
 
 ```
 +-----------------------------------------------------------------+
