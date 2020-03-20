@@ -1,0 +1,4 @@
+MK_PORT:=win
+MK_BITS:=32
+MK_CHAR:=unicode
+DWA_LIBDIR="C:/Program Files (x86)/Dyalog/Dyalog APL 18.0 Unicode/dwa/lib"

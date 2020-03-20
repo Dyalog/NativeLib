@@ -1,0 +1,4 @@
+MK_PORT:=mac
+MK_BITS:=64
+MK_CHAR:=unicode
+DWA_LIBDIR="/Applications/Dyalog-18.0.app/Contents/Resources/dyalog/dwa/lib"
