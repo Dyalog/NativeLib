@@ -1,0 +1,4 @@
+MK_PORT:=aix
+MK_BITS:=64
+MK_CHAR:=unicode
+DWA_LIBDIR="/opt/mdyalog/18.0/64/unicode/dwa/lib"

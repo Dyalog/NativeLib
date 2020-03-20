@@ -1,0 +1,14 @@
+#include <windows.h>
+#include <dwa_defs.h>
+
+//If you want to bind a workspace, 
+//	1) uncomment BOUND_RES_WS
+//	2)   comment BOUND_RES_SCRIPT
+//BOUND_RES_WS RCDATA "helloworld.dws"
+BOUND_RES_SCRIPT RCDATA helloworld.dyalog
+#if DEBUG
+BOUND_RES_SCRIPT_FILE RCDATA 
+{ 
+PROJECT_DIR L"//helloworld.dyalog" 
+}
+#endif

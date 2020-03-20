@@ -1,0 +1,165 @@
+### WINDOWS SETTINGS ###
+
+CC_win:=cl.exe
+LD_win:=link.exe
+RC_win:=rc.exe
+SET_RPATH_win=true
+
+CC_OUTFILE_win:=/Fo
+LD_OUTFILE_win:=/OUT:
+
+INCS_WIN:=${INCLUDE}
+
+APL_L_FLAGS_win:=/DLL
+RESEXT_win:=.res
+OBJEXT_win:=.obj
+LIBEXT_win:=.lib
+DLLEXT_win:=.dll
+EXEEXT_win:=.exe
+IMPLIBEXT_win:=.lib
+
+LIBS_win:=htmlhelp.lib user32.lib gdi32.lib  msimg32.lib comctl32.lib comdlg32.lib crypt32.lib \
+secur32.lib oleaut32.lib  ole32.lib oledlg.lib kernel32.lib uuid.lib \
+shell32.lib shlwapi.lib  psapi.lib advapi32.lib winspool.lib wsock32.lib \
+version.lib rpcrt4.lib  mapi32.lib imm32.lib ws2_32.lib 		\
+uxtheme.lib gdiplus.lib powrprof.lib
+
+C_FLAGS_win:=-EHsc -c -nologo -DUNICODE -Zi -FS
+C_FLAGS_win_opt:=-Ox  -MT
+C_FLAGS_win_dbg:=-Od  -MTd
+
+L_FLAGS_win:=/DEBUG:FULL /SUBSYSTEM:CONSOLE /NOLOGO /IGNORE:4099
+R_FLAGS_win:=/NOLOGO
+APL_L_FLAGS_win_opt:=/LTCG
+
+
+### LINUX SETTINGS ###
+
+CC_linux:=gcc
+LD_linux:=gcc
+RC_linux:=./make_resources
+SET_RPATH_linux=true
+
+C_FLAGS_linux=-c -ggdb
+L_FLAGS_linux=-pthread -lstdc++  -Wl,-rpath='$$ORIGIN' 
+
+APL_C_FLAGS_linux:=-fPIC
+APL_L_FLAGS_linux:=-shared -ldl -lm -lncurses -lrt
+
+LD_OUTFILE_linux:=-o
+CC_OUTFILE_linux:=-o
+
+RESEXT_linux:=.res.o
+OBJEXT_linux:=.o
+LIBEXT_linux:=.a
+DLLEXT_linux:=.so
+IMPLIBEXT_linux:=.so
+
+
+### PI SETTINGS ###
+
+CC_pi:=gcc
+LD_pi:=gcc
+RC_pi:=./make_resources
+SET_RPATH_pi=true
+
+C_FLAGS_pi=-c 
+L_FLAGS_pi=-pthread -lstdc++  -Wl,-rpath='$$ORIGIN' 
+
+APL_C_FLAGS_pi:=-fPIC
+APL_L_FLAGS_pi:=-shared -ldl -lm -lncurses -lrt
+
+LD_OUTFILE_pi:=-o
+CC_OUTFILE_pi:=-o
+
+RESEXT_pi:=.res.o
+OBJEXT_pi:=.o
+LIBEXT_pi:=.a
+DLLEXT_pi:=.so
+IMPLIBEXT_pi:=.so
+
+### MACOS SETTINGS ###
+
+CC_mac:=gcc
+LD_mac:=gcc
+RC_mac:=./make_resources
+SET_RPATH_mac:=install_name_tool
+
+C_FLAGS_mac_64=-c -ggdb3
+#L_FLAGS_mac_64=-pthread  
+
+APL_C_FLAGS_mac_64:=-fPIC
+APL_L_FLAGS_mac_64:=-shared -ldl -lm -lncurses 
+
+LD_OUTFILE_mac:=-o
+CC_OUTFILE_mac:=-o
+
+RESEXT_mac:=.res.o
+OBJEXT_mac:=.o
+LIBEXT_mac:=.a
+DLLEXT_mac:=.dylib
+IMPLIBEXT_mac:=.dylib
+
+
+### AIX SETTINGS
+
+CC_aix:=xlc_r
+LD_aix:=xlc_r
+RC_aix:=./make_resources
+SET_RPATH_aix=true
+
+C_FLAGS_aix=-c  
+C_FLAGS_aix_dbg=-g
+C_FLAGS_aix_32=-q32
+C_FLAGS_aix_64=-q64
+
+L_FLAGS_aix=
+L_FLAGS_aix_32=-q32
+L_FLAGS_aix_64=-q64
+
+R_FLAGS_aix_32=-q32
+R_FLAGS_aix_64=-q64
+
+APL_C_FLAGS_aix:=-fPIC
+APL_L_FLAGS_aix:=-ldl -lC -lm -lncurses -qmkshrobj -ldecNumber -lperfstat -lld
+
+LD_OUTFILE_aix:=-o
+CC_OUTFILE_aix:=-o
+
+RESEXT_aix:=.res.o
+OBJEXT_aix:=.o
+LIBEXT_aix:=.a
+DLLEXT_aix:=.so
+IMPLIBEXT_aix:=.so
+
+###
+
+export LIBPREFIX=lib
+
+export CC:=${CC_${MK_PORT}}
+export LD:=${LD_${MK_PORT}}
+export RC:=${RC_${MK_PORT}}
+export SET_RPATH:=${SET_RPATH_${MK_PORT}}
+
+export LD_OUTFILE:=${LD_OUTFILE_${MK_PORT}}
+export CC_OUTFILE:=${CC_OUTFILE_${MK_PORT}}
+
+export RESEXT:=${RESEXT_${MK_PORT}}
+export OBJEXT:=${OBJEXT_${MK_PORT}}
+export LIBEXT:=${LIBEXT_${MK_PORT}}
+export DLLEXT:=${DLLEXT_${MK_PORT}}
+export EXEEXT:=${EXEEXT_${MK_PORT}}
+export IMPLIBEXT:=${IMPLIBEXT_${MK_PORT}}
+
+export LIBS:=${LIBS_${MK_PORT}} ${LIBS_${MK_PORT}_${MK_BITS}}
+
+export C_FLAGS:=${C_FLAGS_${MK_PORT}} ${C_FLAGS_${MK_PORT}_${MK_BITS}} ${C_FLAGS_${MK_PORT}_${MK_OPT}} ${C_FLAGS_${MK_PORT}_${MK_OPT}_${MK_BITS}}
+export L_FLAGS:=${L_FLAGS_${MK_PORT}} ${L_FLAGS_${MK_PORT}_${MK_BITS}} ${L_FLAGS_${MK_PORT}_${MK_OPT}} ${L_FLAGS_${MK_PORT}_${MK_OPT}_${MK_BITS}}
+export R_FLAGS:=${R_FLAGS_${MK_PORT}} ${R_FLAGS_${MK_PORT}_${MK_BITS}} ${R_FLAGS_${MK_PORT}_${MK_OPT}} ${R_FLAGS_${MK_PORT}_${MK_OPT}_${MK_BITS}}
+
+export APL_C_FLAGS:=${APL_C_FLAGS_${MK_PORT}} ${APL_C_FLAGS_${MK_PORT}_${MK_BITS}} ${APL_C_FLAGS_${MK_PORT}_${MK_OPT}} ${APL_C_FLAGS_${MK_PORT}_${MK_OPT}_${MK_BITS}}
+export EXE_C_FLAGS:=${EXE_C_FLAGS_${MK_PORT}} ${EXE_C_FLAGS_${MK_PORT}_${MK_BITS}} ${APL_C_FLAGS_${MK_PORT}_${MK_OPT}} ${EXE_C_FLAGS_${MK_PORT}_${MK_OPT}_${MK_BITS}}
+
+export APL_L_FLAGS:=${APL_L_FLAGS_${MK_PORT}} ${APL_L_FLAGS_${MK_PORT}_${MK_BITS}} ${APL_L_FLAGS_${MK_PORT}_${MK_OPT}} ${APL_L_FLAGS_${MK_PORT}_${MK_OPT}_${MK_BITS}}
+export EXE_L_FLAGS:=${EXE_L_FLAGS_${MK_PORT}} ${EXE_L_FLAGS_${MK_PORT}_${MK_BITS}} ${EXE_L_FLAGS_${MK_PORT}_${MK_OPT}} ${EXE_L_FLAGS_${MK_PORT}_${MK_OPT}_${MK_BITS}}
+

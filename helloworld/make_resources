@@ -1,0 +1,78 @@
+#!/bin/sh
+#set -x
+
+embed_file()
+{
+	FILE=$1
+	NAME=$2
+	VNAME=$(echo $FILE | sed "s/\./_/")
+	echo "#undef ${NAME}_data_len"
+	echo "#undef ${NAME}_data"
+	xxd -i $FILE | sed "s/unsigned int ${VNAME}_len = \(.*\);/#define ${NAME}_data_len \1/" | sed "s/${VNAME}/${NAME}_data/"  
+}
+
+create()
+{
+echo "#include \"call_apl_resources.h\""
+echo
+echo "#define BOUND_RES_SCRIPT_data_len 0"
+echo "#define BOUND_RES_SCRIPT_data 0"
+echo "#define BOUND_RES_WS_data_len 0"
+echo "#define BOUND_RES_WS_data 0"
+
+cat $RCFILE | sed -n "s/^\(BOUND_RES_[A-Z]*\)[ \t]*RCDATA[ \t]*\([a-zA-Z]*\)/\1 \2/p" | while read name file
+do
+	(
+	cd $(dirname $RCFILE)
+	#echo $file $name
+	if [ -f $file ] ; then
+		embed_file $file $name
+	else
+		echo file: $file NOT FOUND >&2
+		exit 2
+	fi
+	)
+done
+
+
+echo "const APL_RESOURCES _dwa_hInst={"
+	echo BOUND_RES_SCRIPT_data, 
+	echo BOUND_RES_SCRIPT_data_len,
+	echo BOUND_RES_WS_data, 
+	echo BOUND_RES_WS_data_len
+	echo "};"
+
+echo "const APL_RESOURCES *dwa_hInst=&_dwa_hInst;"
+}
+
+compile()
+{
+${CC} $1 ${C_FLAGS} ${CC_OUTFILE}$OUTPUT
+}
+
+while [ $# -gt 0 ]
+do
+        case $1 in
+        /Fo*)
+		OUTPUT=$(echo $1 | sed "s?^/Fo??")
+		shift
+		;;
+	/I*)
+		shift
+		;;
+	*)
+		RCFILE=$1
+		shift
+		;;
+	esac
+done
+
+
+create > ${OUTPUT}.tmp.c
+compile ${OUTPUT}.tmp.c
+
+
+
+
+
+
