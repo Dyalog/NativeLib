@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "exe", "JSON_APL\call_JSON_APL\call_JSON_APL.vcxproj", "{8bd1599b-54db-44c1-9632-d2c391aa134f}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7faa709a-8484-4e7f-b7ce-7a080b0f8303} = {7faa709a-8484-4e7f-b7ce-7a080b0f8303}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "apl", "JSON_APL\JSON_APL\JSON_APL.vcxproj", "{7faa709a-8484-4e7f-b7ce-7a080b0f8303}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+ 		Debug|x64 = Debug|x64
+ 		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+ 		{8bd1599b-54db-44c1-9632-d2c391aa134f}.Debug|x64.ActiveCfg = Debug|x64
+ 		{8bd1599b-54db-44c1-9632-d2c391aa134f}.Debug|x64.Build.0 = Debug|x64
+ 		{8bd1599b-54db-44c1-9632-d2c391aa134f}.Release|x64.ActiveCfg = Release|x64
+ 		{8bd1599b-54db-44c1-9632-d2c391aa134f}.Release|x64.Build.0 = Release|x64
+ 		{7faa709a-8484-4e7f-b7ce-7a080b0f8303}.Debug|x64.ActiveCfg = Debug|x64
+ 		{7faa709a-8484-4e7f-b7ce-7a080b0f8303}.Debug|x64.Build.0 = Debug|x64
+ 		{7faa709a-8484-4e7f-b7ce-7a080b0f8303}.Release|x64.ActiveCfg = Release|x64
+ 		{7faa709a-8484-4e7f-b7ce-7a080b0f8303}.Release|x64.Build.0 = Release|x64
+
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69e203e7-99c5-46bd-8ec9-b1594630d481}
+	EndGlobalSection
+EndGlobal
