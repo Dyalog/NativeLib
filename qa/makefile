@@ -1,6 +1,6 @@
 SAMPLE:=qa
 include makefile.win.64
-MK_OPT:=$(if $(MK_OPT),$(MK_OPT),dbg)
+MK_OPT:=$(if $(MK_OPT),$(MK_OPT),opt)
 include makefile.common
 
 CALLER:=call_$(SAMPLE)
