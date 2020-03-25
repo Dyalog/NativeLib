@@ -3,12 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "exe", "helloworld\call_helloworld\call_helloworld.vcxproj", "{e2335252-0c5b-431c-bb49-2919f7af8092}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "exe", "helloworld\call_helloworld\call_helloworld.vcxproj", "{52228256-7735-45f3-a870-3744288b94d6}"
 	ProjectSection(ProjectDependencies) = postProject
-		{a79519e9-0399-443a-8ba3-4bea9c87b789} = {a79519e9-0399-443a-8ba3-4bea9c87b789}
+		{404939f2-6ff5-4bf2-ae7c-932aa77296dd} = {404939f2-6ff5-4bf2-ae7c-932aa77296dd}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "apl", "helloworld\helloworld\helloworld.vcxproj", "{a79519e9-0399-443a-8ba3-4bea9c87b789}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "apl", "helloworld\helloworld\helloworld.vcxproj", "{404939f2-6ff5-4bf2-ae7c-932aa77296dd}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,20 +16,20 @@ Global
  		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
- 		{e2335252-0c5b-431c-bb49-2919f7af8092}.Debug|x64.ActiveCfg = Debug|x64
- 		{e2335252-0c5b-431c-bb49-2919f7af8092}.Debug|x64.Build.0 = Debug|x64
- 		{e2335252-0c5b-431c-bb49-2919f7af8092}.Release|x64.ActiveCfg = Release|x64
- 		{e2335252-0c5b-431c-bb49-2919f7af8092}.Release|x64.Build.0 = Release|x64
- 		{a79519e9-0399-443a-8ba3-4bea9c87b789}.Debug|x64.ActiveCfg = Debug|x64
- 		{a79519e9-0399-443a-8ba3-4bea9c87b789}.Debug|x64.Build.0 = Debug|x64
- 		{a79519e9-0399-443a-8ba3-4bea9c87b789}.Release|x64.ActiveCfg = Release|x64
- 		{a79519e9-0399-443a-8ba3-4bea9c87b789}.Release|x64.Build.0 = Release|x64
+ 		{52228256-7735-45f3-a870-3744288b94d6}.Debug|x64.ActiveCfg = Debug|x64
+ 		{52228256-7735-45f3-a870-3744288b94d6}.Debug|x64.Build.0 = Debug|x64
+ 		{52228256-7735-45f3-a870-3744288b94d6}.Release|x64.ActiveCfg = Release|x64
+ 		{52228256-7735-45f3-a870-3744288b94d6}.Release|x64.Build.0 = Release|x64
+ 		{404939f2-6ff5-4bf2-ae7c-932aa77296dd}.Debug|x64.ActiveCfg = Debug|x64
+ 		{404939f2-6ff5-4bf2-ae7c-932aa77296dd}.Debug|x64.Build.0 = Debug|x64
+ 		{404939f2-6ff5-4bf2-ae7c-932aa77296dd}.Release|x64.ActiveCfg = Release|x64
+ 		{404939f2-6ff5-4bf2-ae7c-932aa77296dd}.Release|x64.Build.0 = Release|x64
 
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8622a47c-e6ae-42fe-b83f-d243aefacf9d}
+		SolutionGuid = {51f2fb02-bd4f-4837-a5a3-4e44375f15e6}
 	EndGlobalSection
 EndGlobal

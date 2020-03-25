@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{{a79519e9-0399-443a-8ba3-4bea9c87b789}}</ProjectGuid>
+    <ProjectGuid>{{404939f2-6ff5-4bf2-ae7c-932aa77296dd}}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>helloworld</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
