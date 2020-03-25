@@ -14,7 +14,7 @@ These are the C source and build files for the Dyalog Native Library Samples.
 ```
 
 ## JSON_APL
-The JSON_APL sample allows the user to call APL functions from any language which can access native shared libraries (using what is commonly referred to as the "foreign function interface"), passing arguments and receiving results in JSON (JavaScript Object Notation) format.
+The JSON_APL sample allows the user to call APL functions from any language which can access native shared libraries (using what is commonly referred to as the "foreign function interface"), passing arguments and receiving results in JSON (JavaScript Object Notation) format. Its use is documented in [*The JSON_APL Shared Object*](http://docs.dyalog.com/latest/The%20JSON_APL%20Shared%20Object.pdf).
 
 ## HelloWorld
 The HelloWorld sample calls into APL to display a simple "hello" message.
