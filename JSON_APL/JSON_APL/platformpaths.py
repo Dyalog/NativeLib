@@ -1,17 +1,18 @@
+# These paths are for an optimised (opt) build from the source code found on https://github.com/Dyalog/NativeLib
 sopaths = {
   "64bit": {
-    "Linux": "./JSON_APL.dll",
-    "Darwin": "./JSON_APL.dll",
-    "Windows": "./JSON_APL.dll",
+    "Linux": "./obj/JSON_APL/linux/64/opt/libJSON_APL.so",
+    "Darwin": "./obj/JSON_APL/mac/64/opt/libJSON_APL.dylib",
+    "Windows": "./x64/Release/JSON_APL.dll",
   },
   "32bit": {
-    "Windows": "./JSON_APL.dll",
+    "Windows": "./Release/JSON_APL.dll",
   }
 }
 ridelibpaths = {
   "64bit": {
-    "Linux": "C:/Program Files/Dyalog/Dyalog APL-64 18.0 Unicode/conga33_64.dll",
-    "Darwin": "C:/Program Files/Dyalog/Dyalog APL-64 18.0 Unicode/conga33_64.dll",
+    "Linux": "/opt/mdyalog/18.0/64/unicode/lib/conga33_64.so",
+    "Darwin": "/Applications/Dyalog-18.0.app/Contents/Resources/dyalog/lib/conga33_64.dylib",
     "Windows": "C:/Program Files/Dyalog/Dyalog APL-64 18.0 Unicode/conga33_64.dll",
   },
   "32bit": {
